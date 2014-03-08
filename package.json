@@ -21,15 +21,15 @@
   },
   "devDependencies": {
     "reactify": "~0.8.1",
-    "node-dev": "~2.1.6",
     "envify": "~1.2.0",
     "browserify": "~3.26.0",
     "connect-browserify": "~1.0.0",
-    "uglifyjs": "^2.3.6"
+    "uglifyjs": "^2.3.6",
+    "nodemon": "^1.0.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node-dev --no-deps server.js",
+    "start": "nodemon server.js",
     "build": "NODE_ENV=production browserify ./ | uglifyjs -cm 2>/dev/null > ./assets/bundle.js",
     "start-prod": "NODE_ENV=production node server.js",
     "clean": "rm -f ./assets/bundle.js"
