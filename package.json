@@ -1,0 +1,39 @@
+{
+  "name": "headto",
+  "version": "0.0.1",
+  "description": "Headto app implemented in React",
+  "main": "./server.js",
+  "browser": "./client.js",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "react": "~0.9.0",
+    "react-async": "~0.6.0",
+    "react-router-component": "~0.7.0",
+    "express": "~3.4.8",
+    "node-jsx": "~0.9.0",
+    "superagent": "~0.16.0",
+    "fibers": "^1.0.1",
+    "connect-less": "^0.3.1"
+  },
+  "devDependencies": {
+    "reactify": "~0.8.1",
+    "node-dev": "~2.1.6",
+    "envify": "~1.2.0",
+    "browserify": "~3.26.0",
+    "connect-browserify": "~1.0.0",
+    "uglifyjs": "^2.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev --no-deps server.js",
+    "build": "NODE_ENV=production browserify ./ | uglifyjs -cm 2>/dev/null > ./assets/bundle.js",
+    "start-prod": "NODE_ENV=production node server.js",
+    "clean": "rm -f ./assets/bundle.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

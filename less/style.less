@@ -1,0 +1,60 @@
+@import "lib/normalize.less";
+@import "lib/preboot.less";
+
+@import 'loader.less';
+@import 'search.less';
+@import 'typeahead.less';
+
+@body-background: #04a5e6;
+@text-color: #ffffff;
+
+html,
+body {
+  #gradient > .vertical(#542687,  #04a5e6);
+  color: @text-color;
+  padding: 10px;
+}
+
+// Variables
+@link-color: @text-color;
+@link-color-hover: darken(@link-color, 15%);
+
+// Usage
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: 80%;
+  text-align: center;
+  .center-block();
+}
+
+.title {
+  font-weight: normal;
+
+  h1 {
+    font-size: 4em;
+    margin: 0.5em auto;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
