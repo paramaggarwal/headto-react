@@ -2,7 +2,7 @@
  * @jsx React.DOM
  */
 
-var React       = require('react');
+var React = require('react');
 
 var SearchResults = React.createClass({
 	render: function() {
@@ -41,7 +41,7 @@ module.exports = React.createClass({
 		return (
 			<div>
 				<form className='search' onSubmit={this.handleSubmit}>
-					<input className='typeahead' onChange={this.onChange} value={this.state.text}/>
+					<input className='typeahead' onChange={this.onChange} placeholder='Where are you heading?' value={this.state.text}/>
 					<button>Search</button>
 				</form>
     			<SearchResults items={this.state.items} />

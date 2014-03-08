@@ -23,11 +23,11 @@ function renderApp(req, res, next) {
 }
 
 var api = express()
-  .get('/users/:username', function(req, res) {
-    var username = req.params.username;
+  .get('/venue/:id', function(req, res) {
+    var id = req.params.id;
     res.send({
-      username: username,
-      name: username.charAt(0).toUpperCase() + username.slice(1)
+      id: id,
+      name: id.charAt(0).toUpperCase() + id.slice(1)
     });
   });
 

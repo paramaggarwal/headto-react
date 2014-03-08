@@ -9,7 +9,7 @@ var Pages       = ReactRouter.Pages;
 var Page        = ReactRouter.Page;
 
 var MainPage = require('./main');
-var UserPage = require('./user');
+var VenuePage = require('./venue');
 
 module.exports = React.createClass({
 
@@ -24,7 +24,7 @@ module.exports = React.createClass({
         </head>
         <Pages className="App" path={this.props.path}>
           <Page path="/" handler={MainPage} />
-          <Page path="/users/:username" handler={UserPage} />
+          <Page path="/venue/:id" handler={VenuePage} />
         </Pages>
       </html>
     );
